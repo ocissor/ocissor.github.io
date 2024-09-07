@@ -228,8 +228,6 @@ color: #FFFFFF;
   background-size:cover;
   color:#fff;
   animation: backgroundSlideIn 2s ease-out forwards;
-  width:100%;
-  height:auto;
 }
 #hero-banner.item {
   height: 558px;
