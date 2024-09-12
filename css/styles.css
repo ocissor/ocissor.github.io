@@ -317,7 +317,8 @@ color: #FFFFFF;
 #features h2, #portfolio p{ color: #fff;}
 #features {
   padding: 100px 0;
-  background: #C3360B;
+  /*background: #C3360B;*/
+  background: #FFF;
   color: #fff;
 }
 
@@ -349,7 +350,30 @@ color: #FFFFFF;
 .features .media.service-box .pull-left > i{
 color:#CC5632;
 }
+
 .media.service-box:hover .pull-left > i {  
+}
+.customer-video{
+  border-radius: 20px;;
+}
+.retailer-video{
+  border-radius: 20px;;
+}
+.customer-photo{
+  width:6%;
+  height: auto;
+  margin-right: 10px;
+}
+.retailer-photo{
+  width: 6%;
+  height: auto;
+  margin-right: 10px;
+}
+#about{
+  background: rgb(16, 15, 15);
+}
+#our-team{
+  background-color: #585858;
 }
 #portfolio {
   padding: 100px 0;
