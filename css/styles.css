@@ -224,7 +224,7 @@ color: #FFFFFF;
 #hero-banner{
   overflow: hidden;
   height:650px;
-  background: url('../images/banner/bg1.png');
+  background: url('../images/banner/Untitled\ design.png');
   background-size:cover;
   color:#fff;
   animation: backgroundSlideIn 2s ease-out forwards;
@@ -277,7 +277,7 @@ color: #FFFFFF;
     font-size: 25px;
   }
 #hero-banner h2 {
-  margin-top: 250px;
+  margin-top: 280px;
   font-size: 39px;
   line-height: 49px;  
 }
@@ -363,6 +363,7 @@ color:#CC5632;
   width:6%;
   height: auto;
   margin-right: 10px;
+  margin-top: 25px;;
 }
 .retailer-photo{
   width: 6%;
@@ -375,6 +376,7 @@ color:#CC5632;
 #our-team{
   background-color: #585858;
 }
+
 #portfolio {
   padding: 100px 0;
   background: #000000;
