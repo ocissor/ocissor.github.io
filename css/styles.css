@@ -165,6 +165,8 @@ color: #FFFFFF;
   height: auto;
   padding: 22px 15px 21px;
 }
+
+
 @media only screen and (min-width: 768px) {
   #main-nav.navbar-default {
     background: #FFFFFF;
@@ -224,8 +226,9 @@ color: #FFFFFF;
 #hero-banner{
   overflow: hidden;
   height:650px;
-  background: url('../images/banner/Untitled\ design.png');
+  background: url('../images/banner/banner.png');
   background-size:cover;
+  background-repeat: no-repeat;
   color:#fff;
   animation: backgroundSlideIn 2s ease-out forwards;
 }
@@ -353,22 +356,55 @@ color:#CC5632;
 
 .media.service-box:hover .pull-left > i {  
 }
-.customer-video{
-  border-radius: 20px;;
+iframe.retailer-video, iframe.customer-video {
+  display: block;
+  margin: 0 auto; /* Centers the video horizontally */
+  width: 100%;
+  height: 500px; /* Set a larger height */
+  max-width: 450px; /* Limit the width to avoid stretching too much */
+  border: 5px solid #000;
+  border-radius: 20px;
 }
-.retailer-video{
-  border-radius: 20px;;
+
+@media (max-width: 768px) {
+  iframe.retailer-video, iframe.customer-video {
+      height: 450px; /* Ensure a decent height on smaller screens */
+      max-width: 100%; /* Allow full width on small screens */
+      margin: 0 auto; /* Center-align for smaller screens as well */
+  }
 }
+
+/* Center-align the iframe in the About Us section */
+iframe.about-us-video {
+  display: block;
+  margin: 0 auto; /* Centers the iframe */
+  width: 100%;
+  height: 560px;
+  max-width: 300px; /* Limit width to avoid stretching */
+  border: 2px solid #C3360B;
+}
+
+@media (max-width: 768px) {
+  iframe.about-us-video {
+      height: 400px; /* Adjust height for smaller screens */
+      max-width: 100%; /* Allow full width on smaller screens */
+      margin: 0 auto; /* Ensure it's still centered on small screens */
+  }
+}
+
+
 .customer-photo{
   width:6%;
   height: auto;
   margin-right: 10px;
-  margin-top: 25px;;
 }
 .retailer-photo{
   width: 6%;
   height: auto;
   margin-right: 10px;
+}
+#features{
+  background: #DBD6D3;
 }
 #about{
   background: rgb(16, 15, 15);
