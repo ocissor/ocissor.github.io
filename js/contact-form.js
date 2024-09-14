@@ -12,7 +12,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
     try {
         // Send data to AWS API with Content-Type and User-Agent headers
-        const awsResponse = await fetch('https://o1eurkyz65.execute-api.ap-south-1.amazonaws.com/prod/waitlist', {
+        const awsResponse = await fetch('https://xsieaqi390.execute-api.ap-south-1.amazonaws.com/prod/waitlist', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json', // Set Content-Type header
