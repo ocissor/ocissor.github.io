@@ -11,11 +11,12 @@ document.getElementById('contactForm').addEventListener('submit', async function
     const message = document.getElementById('message').value;
 
     try {
-        // Send data to AWS API
+        // Send data to AWS API with Content-Type and User-Agent headers
         const awsResponse = await fetch('https://o1eurkyz65.execute-api.ap-south-1.amazonaws.com/prod/waitlist', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/json', // Set Content-Type header
+                'User-Agent': navigator.userAgent // Set User-Agent header
             },
             body: JSON.stringify({
                 name: name,
@@ -36,15 +37,14 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
         } else {
             console.error('Failed to send data to AWS API.');
-            alert('There was a problem submitting the form. Please try again.');
+            alert('There was a problem submitting the form to AWS. Please try again.');
         }
 
     } catch (error) {
-        console.error('Error:', error);
-        alert('An error occurred while submitting the form. Please try again.');
+        console.error('AWS API Error:', error);
+        alert('An error occurred while submitting the form to AWS. Please try again.');
     } finally {
-        // Re-enable the submit button after completion or error
-        submitButton.disabled = false;
+        submitButton.disabled = false; // Re-enable the submit button after completion or error
     }
 });
 
@@ -59,8 +59,12 @@ async function sendToGoogleSheets(name, mobile, email, message) {
     formData.append('message', message);
 
     try {
+        // Include headers for Google Sheets request
         const response = await fetch(scriptURL, {
             method: 'POST',
+            headers: {
+                'User-Agent': navigator.userAgent, // Set User-Agent header for Google Sheets
+            },
             body: formData
         });
 
@@ -68,10 +72,10 @@ async function sendToGoogleSheets(name, mobile, email, message) {
             console.log('Data saved to Google Sheets successfully.');
         } else {
             console.error('Failed to save data to Google Sheets.');
-            alert('There was a problem saving your data. Please try again.');
+            alert('There was a problem saving your data to Google Sheets. Please try again.');
         }
     } catch (error) {
-        console.error('Error:', error);
-        alert('An error occurred while saving data to Google Sheets.');
+        console.error('Google Sheets Error:', error);
+        alert('An error occurred while saving data to Google Sheets. Please try again.');
     }
 }
