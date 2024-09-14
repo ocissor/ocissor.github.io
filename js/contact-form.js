@@ -16,7 +16,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json', // Set Content-Type header
-                'User-Agent': navigator.userAgent // Set User-Agent header
+                'User-Agent': 'PostmanRuntime/7.41.2',
+                'Postman-Token': '69da2aa7-ce18-4b84-872d-93cf81170353',
+                'Host': 'o1eurkyz65.execute-api.ap-south-1.amazonaws.com'
             },
             body: JSON.stringify({
                 name: name,
