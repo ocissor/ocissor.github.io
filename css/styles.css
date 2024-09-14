@@ -356,40 +356,68 @@ color:#CC5632;
 
 .media.service-box:hover .pull-left > i {  
 }
-iframe.retailer-video, iframe.customer-video {
+
+.retailer-video, .customer-video {
   display: block;
-  margin: 0 auto; /* Centers the video horizontally */
-  width: 100%;
-  height: 500px; /* Set a larger height */
-  max-width: 450px; /* Limit the width to avoid stretching too much */
+  margin: 0 auto; /* Center the video horizontally */
+  width: 100%; /* Allow the video to scale */
+  height: auto; /* Maintain aspect ratio */
   border: 5px solid #000;
-  border-radius: 20px;
+  border-radius: 10px;
+}
+
+.customer-video {
+  max-width: 600px; /* Make the customer video larger */
+  height: auto; /* Maintain the aspect ratio */
 }
 
 @media (max-width: 768px) {
-  iframe.retailer-video, iframe.customer-video {
-      height: 450px; /* Ensure a decent height on smaller screens */
-      max-width: 100%; /* Allow full width on small screens */
-      margin: 0 auto; /* Center-align for smaller screens as well */
+  .retailer-video, .customer-video {
+      max-width: 100%; /* Allow full width on smaller screens */
+      height: auto; /* Maintain the aspect ratio */
+      margin: 0 auto; /* Ensure it's still centered on mobile screens */
+  }
+
+  .customer-video {
+      height: 500px; /* Increase height for mobile screens */
   }
 }
 
+
+
 /* Center-align the iframe in the About Us section */
-iframe.about-us-video {
+.product-video {
   display: block;
   margin: 0 auto; /* Centers the iframe */
   width: 100%;
-  height: 560px;
+  height: auto;
   max-width: 300px; /* Limit width to avoid stretching */
-  border: 2px solid #C3360B;
+  border: 5px solid #C3360B;
+  border-radius: 5px;
 }
 
 @media (max-width: 768px) {
-  iframe.about-us-video {
-      height: 400px; /* Adjust height for smaller screens */
+  .product-video {
+      height: auto; /* Adjust height for smaller screens */
       max-width: 100%; /* Allow full width on smaller screens */
       margin: 0 auto; /* Ensure it's still centered on small screens */
   }
+}
+#our-team .row {
+  display: flex;
+  justify-content: center; /* Centers the team members */
+  gap: 40px; /* Adds space between the two team members */
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+#our-team .col-md-6 {
+  flex: 1 1 300px; /* Ensures the team members have equal width */
+  max-width: 400px; /* Controls the maximum width of each team member block */
+}
+
+#our-team .team-member {
+  margin: 0 auto;
+  text-align: center; /* Center text inside each team member block */
 }
 
 
@@ -815,6 +843,7 @@ font-style: normal;
 line-height: 27px;
 font-size: 15px;
 }
+
 .contact-info .form-control { 
 padding: 6px 12px;
 border-radius: 0;
